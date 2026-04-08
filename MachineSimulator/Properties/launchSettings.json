@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MachineSimulator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

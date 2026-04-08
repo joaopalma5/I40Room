@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  cratedb:
+    image: crate:latest
+    container_name: cratedb
+    ports:
+      - "4200:4200"
+      - "5432:5432"
+    environment:
+      - CRATE_HEAP_SIZE=2g
+    volumes:
+      - crate_data:/data  # Persists the actual database files
+    command: >
+      crate -Cdiscovery.type=single-node
+          
+  coreflux:
+    image: coreflux/coreflux-mqtt-broker:latest
+    container_name: coreflux_broker
+    ports:
+      - "1883:1883"
+    volumes:
+      - coreflux_config:/etc/coreflux  # Persists your broker settings
+     #  - ./my_flux_assets:/app/assets   # Local folder where your .flux files live
+    depends_on:
+      - cratedb
+
+volumes:
+  crate_data:
+  coreflux_config:

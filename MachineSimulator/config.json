@@ -1,0 +1,68 @@
+{
+  "BrokerAddress": "localhost",
+  "BrokerPort": 1883,
+  "GroupId": "Automotive",
+  "NodeId": "FactoryFloor",
+  "DeviceId": "SolenoidValve1",
+  "ScanRateMs": 1000,
+  "SqliteDbPath": "telemetry_cache.db",
+
+  // Physics Factors
+  "TempBuildupFactor": 0.0001,
+  "WearFactor": 0.00002, // Adjust this to speed up/slow down degradation
+  "NoiseAmplitude": 0.05,
+
+  "MetricsEnabled": {
+    "ProductionCount": true,
+    "TemperatureC": true,
+    "HydraulicPressurePsi": true,
+    "AirPressurePsi": true,
+    "AirFlowRateLpm": true,
+    "DefectRate": true,
+    "PullInCurrentA": true,
+    "PullInVoltageV": true,
+    "CoilResistanceOhm": true,
+    "LeakRateCcMin": true,
+    "VibrationPeakG": true,
+    "HealthScore": true,
+    "Status": true
+  }
+}
+
+
+//{
+//  "BrokerAddress": "localhost",
+//  "BrokerPort": 1883,
+//  "GroupId": "Automotive",
+//  "NodeId": "FactoryFloor",
+//  "DeviceId": "SolenoidValveMachine1",
+//  "ScanRateMs": 2000,
+//  "SqliteDbPath": "telemetry_cache.db",
+//  "TempBuildupFactor": 0.0001,
+//  "WearFactor": 0.00001,
+//  "NoiseAmplitude": 0.05,
+//  "MetricsEnabled": {
+//    "ProductionCount": true,
+//    "TemperatureC": true,
+//    "HydraulicPressurePsi": true,
+//    "AirPressurePsi": true,
+//    "AirFlowRateLpm": true,
+//    "DefectRate": true,
+//    "PullInCurrentA": true,
+//    "PullInVoltageV": true,
+//    "CoilResistanceOhm": true,
+//    "LeakRateCcMin": true,
+//    "VibrationPeakG": true,
+//    "Status": true
+//  },
+//  "Thresholds": {
+//    "TemperatureC": {
+//      "Max": 95.0,
+//      "TriggerState": "Error"
+//    },
+//    "VibrationPeakG": {
+//      "Max": 4.5,
+//      "TriggerState": "Maintenance"
+//    }
+//  }
+//}

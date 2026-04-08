@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SampleSendCmd": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
